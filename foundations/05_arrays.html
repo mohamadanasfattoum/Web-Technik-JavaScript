@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+
+    Monate mir "R":
+    <div id="result"></div>
+
+    <!-- for(let i = 0; i <= 11; i++){if(months[i].includes('r')){console.log(months[i])}} in consol geben -->
+    <!-- let dateArray = date.split('.'); for(let i = 0; i <=2; i++){console.log(dateArray[i])} -->
+    <script>
+        const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
+        for (let i = 0; i <= 11; i++) {
+          if (months[i].includes('r')) {
+            document.getElementById('result').innerHTML += months[i] + '<br>'
+          }
+        }
+
+        const date = '17.05.2025'
+        const dateArray = date.split('.')
+        console.log(dateArray)
+
+        console.log(dateArray[0] + '. ' + months[dateArray[1] - 1] + ' ' + dateArray[2])
+    </script>
+
+</body>
+</html>
