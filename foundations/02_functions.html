@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktionen</title>
+</head>
+<body>
+    <h1>Funktionen</h1>
+
+    <div style="display: flex">
+        <ul id="result"></ul>
+        <ul id="result2"></ul>
+        <ul id="result3"></ul>
+    </div>
+
+    <h1><br>Funktion2</h1>
+    <div style="display: flex">
+        <ul id="result4"></ul>
+    </div>
+
+
+
+    <h1>Discount</h1>
+    <div style="display: flex;">
+        <ul id="discount"></ul>
+
+    </div>
+
+
+    <script>
+        const a = 4 * 1.19
+        const b = 7 * 1.19
+        const c = 12 * 1.19
+        
+        const li = document.createElement('li')
+        li.innerHTML = 'Bruttopreis: ' + a
+        document.getElementById('result').appendChild(li)
+
+        const li2 = document.createElement('li')
+        li2.innerHTML = 'Bruttopreis: ' + b
+        document.getElementById('result').appendChild(li2)
+
+        const li3 = document.createElement('li')
+        li3.innerHTML = 'Bruttopreis: ' + c
+        document.getElementById('result').appendChild(li3)
+
+        /// ///////////////////////////////////////
+
+        const li4 = document.createElement('li')
+        li4.innerHTML = 'Bruttopreis:' + addVat(4)
+        document.getElementById('result2').appendChild(li4)
+
+        const li5 = document.createElement('li')
+        li5.innerHTML = 'Bruttopreis:' + addVat(7)
+        document.getElementById('result2').appendChild(li5)
+        
+        const li6 = document.createElement('li')
+        li6.innerHTML = 'Bruttopreis:' + addVat(12)
+        document.getElementById('result2').appendChild(li6)
+
+        function addVat (number) {
+          const result = number * 1.19
+          return result
+        }
+
+        /// ///////////////////////////////////////
+
+
+        
+
+
+        displayPrice(4)
+        displayPrice(7)
+        displayPrice(12)
+        displayPrice(12)
+
+        
+        function displayPrice (number) {
+          const result = number * 1.19
+          const li = document.createElement('li')
+          li.innerHTML = 'Bruttopreis: ' + result
+          document.getElementById('result3').appendChild(li)
+        }
+
+
+
+
+        /// ///////////////////////////////////////
+
+        bruttoPrice(8)
+        bruttoPrice(50)
+
+
+        function bruttoPrice(price) {
+            const resultPrice = price * 1.19
+            const li = document.createElement('li')
+            li.innerHTML = 'Brutto Price: ' + resultPrice
+            document.getElementById('result4').appendChild(li)
+        }
+
+
+
+
+
+
+
+        /// ///////////////////////////////////////
+
+
+        // id = discount
+
+        
+
+        priceDiscount(50,50)
+
+        function priceDiscount (discountNumber,bruttoPrice){
+            const discountedPrice = bruttoPrice + discountNumber
+            const li = document.createElement('li')
+            li.innerHTML = 'Discounted Price: ' + discountedPrice
+            document.getElementById('discount').appendChild(li)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
