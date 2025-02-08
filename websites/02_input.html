@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutzereingaben</title>
+</head>
+<body>
+    <h1>Nutzereingaben</h1>
+    <h2>Willkommen <span style=" padding: .5rem; margin: 1rem; border: 4px solid darkblue "id="output"></span></h2>
+    <input type="text" id="name" placeholder="Dein Name" autocomplete="off">
+    
+    <!-- <script>
+        // holt den Input mit querySelector
+        document.querySelector('input').addEventListener('input', function () {
+          document.getElementById('output').textContent = this.value
+        })
+    </script> -->
+   <!-- <script>
+    document.getElementById('name').addEventListener('input', function () 
+    {
+        document.getElementById('output').textContent = this.value    
+    })
+   </script> -->
+   <script>
+    document.getElementById('name').addEventListener('input', nameInput)
+
+    function nameInput () 
+    {
+        document.getElementById('output').textContent = this.value   // Diese funktion holt den Output und verändert es mit this value, meint nme diese Value und ändere es.
+        //  this.value zeigt auf den value den in input gegeben wurde umd holt man den Value mit input von addventlistener 
+    }
+   </script>
+
+</body>
+</html>
