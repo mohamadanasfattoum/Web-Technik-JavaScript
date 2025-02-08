@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<body>
+    <h1 id="css-style" >CSS</h1>
+    
+    <input  type="text" id="css-input" placeholder="Farbe" spellcheck="false">
+    
+    <!-- <script>
+        document.querySelector('input').addEventListener('input', function () {
+          document.querySelector('h1').style.color = this.value
+        })
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('css-input').addEventListener('input', function(){
+            document.getElementById('css-style').style.color = this.value
+            // document.getElementById('css-style').style.background = this.value
+            // document.getElementById('css-style').style.fontSize = this.value + 'px'
+
+
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
