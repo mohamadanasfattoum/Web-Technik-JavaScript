@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alle Elemente</title>
+</head>
+<body>
+    <h1>Alle Elemente</h1>
+    
+    <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>Element 5</li>
+    </ul>
+    <script>
+        // document.querySelector('li').innerHTML = 'Hallo Welt'
+        var i = 0
+        document.querySelectorAll('li').forEach(function (li) {
+            
+            i = i + 1
+            li.innerHTML = 'Hallo Welt ' + i
+        })
+    </script>
+   
+
+
+</body>
+</html>
