@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlenrätsel</title>
+</head>
+<body>
+    <h1>Zahlen erraten</h1>
+
+    Rate eine Zahl zwischen 1 und 10<br>
+   
+    <input type="number" id="guess" placeholder="Rate eine Zahl"><br>
+    Anzahl der Versuche: <span id="tries">0</span><br>
+    <span id="result"></span>
+
+    <script>
+        const number = Math.floor(Math.random() * 10)
+        const guess = document.getElementById('guess')
+        const result = document.getElementById('result')
+        let tries = 0
+
+        guess.addEventListener('input', function () {
+          if (guess.value === '') return
+
+          if (parseInt(guess.value) === number) {
+            result.innerHTML = 'Richtig geraten!'
+          }
+
+          if (guess.value < number) {
+            result.innerHTML = 'Zu niedrig!'
+          }
+
+          if (guess.value > number) {
+            result.innerHTML = 'Zu hoch!'
+          }
+
+          tries = tries + 1
+
+          document.getElementById('tries').textContent = tries
+        })
+    </script>
+   
+
+
+</body>
+</html>

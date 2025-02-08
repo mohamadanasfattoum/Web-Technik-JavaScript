@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wie lange noch?</title>
+</head>
+<body>
+    <h1>Wie lange noch?</h1>
+    
+    <span id="output"></span>
+   
+    
+    <script>
+        const from = new Date('2024-12-24T00:00:00')
+        const to = new Date('2025-12-24T00:00:00')
+
+        const diff = to - from
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24))
+        const hours = Math.floor(diff / (1000 * 60 * 60) % 24)
+        const minutes = Math.floor(diff / (1000 * 60) % 60)
+
+        document.getElementById('output').textContent = `Dazwischen liegen ${days} Tage, ${hours} Stunden und ${minutes} Minuten.`
+    </script>
+   
+
+
+</body>
+</html>
