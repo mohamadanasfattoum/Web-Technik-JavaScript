@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taschenrechner</title>
+</head>
+<body>
+    <h1>Taschenrechner</h1>
+    
+    <input type="number" id="a" placeholder="a">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="b" placeholder="b">
+    <button id="calculate">=</button>
+    <span id="result"></span>
+<!-- 
+    <script>
+        document.querySelector('#calculate').addEventListener('click', function () {
+          const a = document.getElementById('a').value
+          const b = document.getElementById('b').value
+          const operator = document.getElementById('operator').value
+          let result = 0
+
+          if (operator === '+') {
+            result = parseInt(a) + parseInt(b)
+          } else if (operator === '-') {
+            result = a - b
+          } else if (operator === '*') {
+            result = a * b
+          } else if (operator === '/') {
+            result = a / b
+          }
+
+          document.getElementById('result').textContent = result
+        })
+    </script> -->
+
+
+
+
+
+
+    <script>
+        
+
+        document.getElementById('calculate').addEventListener('click', function(){
+            const a = document.getElementById('a').value
+            const b = document.getElementById('b').value
+            const operator = document.getElementById('operator').value
+            let result = 0
+
+
+            if (operator === '+') {
+                result = parseInt(a) + parseInt(b)
+            }else if (operator === '-'){
+                result = a - b 
+            }else if(operator === '*'){
+                result = a * b
+            }else if (operator === '/') {
+                result = a / b
+            }
+            document.getElementById('result').textContent = result
+        })
+
+
+    </script>
+</body>
+</html>
