@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variablen</title>
+</head>
+<body>
+    <h1>Variablen</h1>
+
+    <div id="result">Variablen</div>
+
+    <h1>User</h1>
+    <div id="user">User</div>
+
+    <script>
+
+        let name = 'Mohamad Anas Fattoum'
+        let age = 27
+
+        document.getElementById('user').innerHTML = 'Hallo, ich bin' + name + '<br>Alt: ' + age
+
+
+        let a = 4
+        a = a * 4
+
+        document.getElementById('result').innerHTML ='<br>Die Rechnung betägt: ' + a + '€'
+
+        // const windowWidth = window.innerWidth 
+        document.getElementById('result').innerHTML += '<br>Die Fensterbreite beträgt ' + window.innerWidth + ' Pixel'
+    </script>
+
+</body>
+</html>
